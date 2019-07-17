@@ -1,0 +1,21 @@
+server:
+  port: 8001
+spring:
+  profiles: dev #开发环境
+  application:
+    name: microservicecloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761
+---
+server:
+  port: 8002
+spring:
+  profiles: test #测试环境
+  application:
+    name: microservicecloud-config-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761
